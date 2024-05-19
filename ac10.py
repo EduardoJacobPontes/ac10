@@ -1,11 +1,9 @@
 # 1
-
 class Camiseta:
-    def _init_(self, n, c, t):
+    def __init__(self, n, c, t):
         self.nome = n
         self.cor = c
         self.tamanho = t
-
 
 def comp(a, b):
     if(a.cor == b.cor):
@@ -22,7 +20,6 @@ def comp(a, b):
         return -1
     return 1
 
-
 def particao(V, inicio, fim):
     pivo = V[fim - 1]
     i = inicio
@@ -36,13 +33,11 @@ def particao(V, inicio, fim):
 
     return i
 
-
 def quickSort(V, inicio, fim):
     if(fim > inicio):
         posicaoPivo = particao(V, inicio, fim)
         quickSort(V, inicio, posicaoPivo)
         quickSort(V, posicaoPivo + 1, fim)
-
 
 first = True
 while True:
@@ -70,6 +65,7 @@ while True:
             print(f'{camiseta.cor} {camiseta.tamanho} {camiseta.nome}')
     except EOFError:
         break
+
 
 
 
